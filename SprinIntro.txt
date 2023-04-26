@@ -1,0 +1,64 @@
+//What is Spring Framework
+
+//In 2000 if we want to create a java project we have to use lot of Java EE features to create an 
+enterprise level project 
+
+//EJB
+
+//Jakarta Enterprise Beans one of several API's for modular level construction of enterprise software 
+//EJB is a server-side software component that encapsulates business logic of an application
+
+//problem is difficult to management entities that are heavy at enerprise level 
+
+
+//People came up with POJO and included that in Spring Framework
+
+
+//Spring features
+
+POJO
+Dependency Injection
+MVC
+REST
+Security
+Batch
+Data
+AOP
+
+//it can integrate with other frameworks like Hibernate and Struts 
+
+//for enterprise level application we have to work with JAR files and the configuration 
+
+//if we are working on a project we have to focus on convention basically coding rather than the configuration part
+
+//SprinBoot helps developers to take care of the JAR files management and configuration part 
+
+//SpringBoot provides us the production ready code 
+
+
+
+Server with hardware and OS on top of that we can install our tomcat service to build a server 
+
+tomcat is a webserver 
+
+on the tomcat server we deploy our App(WAR) file we used to build the web application 
+
+//now-a-days we are moving towards microservices 
+//Springboot don't need to do this all by ourselves
+
+//SprinBoot will embed the tomcat server inside the jar files so that is why it will have the embedded tomcat server 
+
+
+//so we donot need any web server so 
+
+//spring-boot-starter-web
+//spring-boot-starter-jdbc
+
+//spring boot also has the autoconfiguration which will do the autoconfiguration for us
+//spring boot will not generate any xml file for us 
+
+//so we had special file where we can add the properties we needed to add 
+
+//application.properties where we can add the properties we want to add 
+
+

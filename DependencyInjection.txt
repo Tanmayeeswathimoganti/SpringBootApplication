@@ -1,0 +1,76 @@
+//Design patterns 
+//dependency Injection
+
+//In object oriented programming we write the objects to say Object Graph
+
+//Graph which explains the dependency of one object on another object 
+
+class Laptop {
+    HardDrive obj1;
+    Ram obj2;
+}
+
+class Laptop {
+    HitachiHD obj1 = new HitachiHD();
+}
+
+//there the things are tight coupled we need loose coupling of objects 
+
+//loose coupling where one component is not totally dependent on another object it is totally independent of each other 
+//so that object can be replaced in the future 
+
+//so we do abstraction of hardDrive 
+
+HardDrive -> HitachiHD
+
+class Laptop {
+    HardDrive obj1 = new HitachiHD();
+}
+
+//the moment we add new it was tightly coupling the objects by embedding 
+//but we want someone else to do this thing for us
+//we want to inject the HardDrive into this Laptop class 
+//some external service that injects the dependencies for us 
+
+//Spring Container which is a dependency injection container 
+//they are responsible for creating an object for us and injects into the class 
+//in general we need to do the configuration 
+//earlier we used to do Spring Framework for configuration we used to use XML 
+//we can write the xml saying that we need to edit it so that if someone asks object xml file 
+//tells which object to inject 
+//configuring xml is not something that is developers responsibility 
+//Spring Boot replaces the configuration 
+
+
+@Component 
+class HitachiHD implements HardDrive {
+
+}
+
+//which makes them dependent as component of spring framework which will be generated as per the requirement 
+
+class Laptop {
+    HardDrive obj1 = new HitachiHD();
+}
+
+//can be written as 
+
+class Laptop {
+    @Autowired
+    HardDrive obj1;
+}
+
+//SpringBoot with the help of underlying spring framework makes the connection between the component and autowired 
+
+
+//testing 
+//if things are loosely coupled we can create a mock object of for one we want to test 
+//so by making things loosely coupled it makes the testing easy 
+
+//by using loose coupling dependency injection we can test it better, maintain it
+
+
+
+
+
+
